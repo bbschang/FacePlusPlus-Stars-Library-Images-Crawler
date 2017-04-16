@@ -45,14 +45,14 @@ def getStars(filename='stars.txt', donefilename='done.txt'):
 def getStarImage(stars, path='/assets'):
     urlTemplate = 'http://www.faceplusplus.com.cn/assets/demo-img2/%s/%d.jpg'
     pathTemplate = os.getcwd() + path + '/%s/%s-%d.jpg' 
-    print pathTemplate
+    print(pathTemplate)
     finishStars = []
     for s in stars:
         index = 1
         while index > 0:
             try:
                 url = urlTemplate%(s,index)
-                print url
+                print(url)
                 res = urllib2.urlopen(url)
             except Exception, e:
                 # url error like 404 status when image does not exist
